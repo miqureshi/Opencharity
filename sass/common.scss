@@ -168,13 +168,24 @@ h2[name="constent"]{
 .ourMission {padding:40px 100px; width:$edgetoEdge; box-sizing:border-box; background:#f1f2f5;
             > p { text-align:center; font-size:$fontStandardSize; color:$baseColor; margin:30px 0;}
              p.ourMission__subHeading { font-size:$fontMediumSize; margin:0;}
-             .ourMission__list { border-bottom:1px solid #d9dadd; padding: 100px 0 50px 0;
-                                 .ourMission__list--box {@include borderRadius(4px); width:calc(32% - 15px); background:#fff; text-align:center; margin:0 15px 0 15px; padding:0 20px; box-sizing:border-box; display: inline-block;
-                                                         &:last-child { margin-right:0;}
-                                                         &:first-child { margin-left:0;}
-                                                          img { width:inherit; margin:-50px 0 0 0;}
-                                                          h4 { font-size:$fontMediumSize; color:$baseSecondryColor; margin-bottom:20px;}
-                                                          p { font-size:$fontStandardSize; color:$baseColor; margin-bottom:30px;}
+             .ourMission__list { border-bottom: 1px solid #d9dadd;
+    padding: 100px 0 50px 0;
+    margin: 0 -10px 10px -10px;
+                  .ourMission__list--box { @include borderRadius(4px); width:calc(33.333% - 20px);text-align: center;
+    float: left; position: relative; padding-left: 10px; padding-right: 10px;
+                   &:last-child { margin-right:0;}
+                   &:first-child { margin-left:0;}
+                   .ourMission__list--boxDesc {
+                          width: 100%;
+                          box-sizing: border-box;
+                          display: inline-block;
+                          min-height: 200px;
+                          background: #fff;
+                          border-radius: 4px;
+                     img { width:100px; margin:-50px 0 0 0;}
+                     h4 { font-size:$fontMediumSize; color:$baseSecondryColor; margin-bottom:20px;}
+                     p { font-size:$fontStandardSize; color:$baseColor; margin-bottom:30px; padding: 0 10px;}
+                   }
                                  }
              }
 }
@@ -211,13 +222,13 @@ h2[name="constent"]{
   }
   .getInvolved {
     .getInvolved__cell {
-        width: 50%; margin: auto; display: block; margin-bottom: 60px;
+        width: 90%; margin: auto; display: block; margin-bottom: 60px;
         img { width: auto;}
     }
   }
   .ourMission {
     .ourMission__list {
-      .ourMission__list--box {   width: 50%; margin: auto; display: block; margin-bottom: 100px; min-height: 200px;
+      .ourMission__list--box {   width: 90%; margin: auto; display: block; margin-bottom: 100px; min-height: 200px; float: none;
         &:first-child { margin-left: auto;}
         &:last-child { margin-right: auto; margin-bottom: 0;}
       }
@@ -225,7 +236,7 @@ h2[name="constent"]{
   }
   .blog {
     .blog__list {
-      .blog__list--box { width: 50%; margin: auto; display: block; margin-bottom: 60px;
+      .blog__list--box { width: 90%; margin: auto; display: block; margin-bottom: 60px;
 &:last-child { margin-right: auto; margin-left: auto; margin-bottom: 0;}
       }
     }
@@ -233,6 +244,14 @@ h2[name="constent"]{
   .header { padding: 0 20px;
     .header__nav { display: none;}
     .menuIcon { display: block; position: absolute; top: 28px; right: 28px;}
+  }
+  .banner { height: 280px;
+    img { height: 280px;}
+    h2 { font-size: 20px; top: 60px;}
+    .banner--info { padding: 0 20px; top: 110px; font-size: 14px;
+&.banner-info--sec { display: none;}
+    }
+    .banner--infoDetail { top: 180px; font-size: 15px;}
   }
 }
 @media screen and (max-width: $break-xsmall) and (min-width: $break-small) {
@@ -260,6 +279,13 @@ h2[name="constent"]{
     .nextEvent__text { float: none; text-align: center;}
     .nextEvent__btn { float: none; text-align: center;}
   }
+  .banner { height: auto;
+    h2 { font-size: 22px; top: 30px;}
+    .banner--info { padding: 0 60px; top: 80px; font-size: 14px;
+&.banner-info--sec { top: 140px;}
+    }
+    .banner--infoDetail { top: 210px;}
+  }
 }
 @media screen and (max-width: $break-large) and (min-width: $break-medium) {
   .blog,.getInvolved,.ourMission {
@@ -272,13 +298,20 @@ h2[name="constent"]{
   }
   .ourMission {
     .ourMission__list {
-      .ourMission__list--box { width: 33%;}
+      .ourMission__list--box { width: calc(33.333% - 20px);}
     }
   }
   .blog {
     .blog__list {
-      .blog__list--box { width: 25%;}
+      .blog__list--box { width: calc(25% - 30px);}
     }
+  }
+  .banner { height: auto;
+    h2 { font-size: 36px; top: 70px;}
+    .banner--info { padding: 0 180px; top: 140px;
+&.banner-info--sec { top: 220px;}
+    }
+    .banner--infoDetail { top: 290px;}
   }
 }
 /* media queries */
