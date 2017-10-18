@@ -1,0 +1,15 @@
+name = Open Charity
+description = This is a open charity website.
+package = Core
+version = VERSION
+core=7.x
+
+stylesheets[all][] = css/common.css
+stylesheets[all][] = css/colors.css
+stylesheets[all][] = css/layout.css
+
+regions[header] = Header
+regions[help] = Help
+
+regions[content] = Content
+regions[footer] = Footer
