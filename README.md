@@ -22,6 +22,10 @@ This is a drupal based theme.
 - Hamburger menu for Ipad and mobile view
 - CSS methodologies (BEM)
 
+## Font
+font-family: 'Roboto', sans-serif;
+  - Used google font CDN
+
 ## Approach
 - Sementic HTML5
   - The benefit of writing semantic HTML stems from what should be the driving goal of any web page the desire to communicate. By adding semantic tags to your document, you provide additional information about that document, which aids in communication. Specifically, semantic tags make it clear to the browser what the meaning of a page and its content is.
