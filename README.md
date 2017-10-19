@@ -15,7 +15,7 @@ This is a drupal based theme.
 - Owl carousel slider
 
 ## Features
-- Drupal custom theme
+- Drupal 7 custom theme
 - All sections are created by Drupal configurable blocks
 - Fully responsive layout
 - Touch events on Owl Carousel Slider
