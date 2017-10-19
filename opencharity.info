@@ -8,6 +8,9 @@ stylesheets[all][] = css/common.css
 stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/layout.css
 
+scripts[] = js/jquery-1.11.2.min.js
+scripts[] = js/custom.js
+
 regions[header] = Header
 regions[help] = Help
 
